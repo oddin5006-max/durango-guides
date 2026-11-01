@@ -43,7 +43,7 @@
         <a href="#dino" onclick="showSection('dino')">공룡 도감</a>
         <a href="#item" onclick="showSection('item')">가공 레시피</a>
         <a href="#food" onclick="showSection('food')">음식 가공</a>
-        <a href="#island" onclick="showSection('island')">섬·기후</a>
+        <a href="#weapon" onclick="showSection('weapon')">무기선택 가이드</a>
       </nav>
     </div>
   </header>
@@ -421,7 +421,80 @@
       </div>
     </section>
 
-    <section id="island" class="section hidden">
+    <section id="weapon" class="section hidden">
+      <h2>무기선택 가이드</h2>
+      <p class="note">PvP(무법섬) 및 고레벨 사냥 기준. 클릭해서 해당 내용을 확인하세요.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 1.5rem;">
+        <button class="tag" onclick="showWeaponTab('crossbow')" style="cursor:pointer;border:none;">석궁</button>
+        <button class="tag" onclick="showWeaponTab('sword')" style="cursor:pointer;border:none;">한손검</button>
+        <button class="tag" onclick="showWeaponTab('1v1')" style="cursor:pointer;border:none;">1:1 대인전</button>
+        <button class="tag" onclick="showWeaponTab('team')" style="cursor:pointer;border:none;">3:3 / 5:5 팀전</button>
+        <button class="tag" onclick="showWeaponTab('craft')" style="cursor:pointer;border:none;">가공 & 옵션</button>
+      </div>
+
+      <div id="weapon-crossbow" class="weapon-tab">
+        <h3 class="category-title">석궁 (두머리뼈석궁대 등)</h3>
+        <div class="card">
+          <p>후반부·레이드(티라노 등)에서 자주 쓰인 고성능 원거리 무기.<br>
+             공격 속도가 활보다 빠르고, 경직·기절·넉백 효과가 있음.</p>
+          <p style="margin-top:.8rem;"><strong>핵심 재료:</strong> 가공된 갈비뼈 (주재료). 금속은 부재료.<br>
+             주재료 뼈의 옵션이 그대로 계승됨.</p>
+          <p style="margin-top:.8rem;"><strong>추천 옵션:</strong> 방어 관통(뾰족함), 정확도, 공격력.<br>
+             알로사우루스·티라노 뼈: 뾰족함 Lv4 기본 부여 (무거움 패널티 있음 → 표면 가공으로 보완).</p>
+          <p style="margin-top:.8rem;"><strong>팁:</strong> 철광석 뾰족함은 석궁 부재료로는 효율이 떨어짐. 뼈에 뾰족함이 붙은 것(켄트로·안킬로 등)을 주재료로 쓰는 게 유리.</p>
+        </div>
+      </div>
+
+      <div id="weapon-sword" class="weapon-tab hidden">
+        <h3 class="category-title">한손검</h3>
+        <div class="card">
+          <p>근접전의 제왕. 공격 속도가 가장 빠르고 선후딜이 짧아 기동성이 뛰어남.<br>
+             구르기로 원거리 공격을 파훼하기 쉬움.</p>
+          <p style="margin-top:.8rem;">1:1 대인전에서 석궁을 상성상 이김 (구르기 진입 + 빠른 공속).<br>
+             다대다에서는 앞라인 탱커/브루저 역할이 중요.</p>
+        </div>
+      </div>
+
+      <div id="weapon-1v1" class="weapon-tab hidden">
+        <h3 class="category-title">1:1 대인전</h3>
+        <div class="card">
+          <p><strong>한손검 > 석궁</strong> (평균 승률)<br>
+             한손검: 구르기로 진입 + 빠른 공속으로 카이팅을 막음.<br>
+             석궁: 선제 스턴·넉백 성공 시 역전 가능.</p>
+          <p style="margin-top:.8rem;">활이 석궁보다 대인전 딜량에서 약간 더 높게 평가됨 (패시브 명중·방어무시).</p>
+        </div>
+      </div>
+
+      <div id="weapon-team" class="weapon-tab hidden">
+        <h3 class="category-title">3:3 / 5:5 팀전</h3>
+        <div class="card">
+          <p><strong>3:3</strong> — 석궁(원거리) 조합이 유리.<br>
+             일점사 + 메즈 연계로 진입 전에 녹임.</p>
+          <p style="margin-top:.8rem;"><strong>5:5</strong> — 2한손검 + 3석궁 (밸런스) > 5석궁.<br>
+             한손검이 앞을 막아주는 동안 석궁이 프리딜. 올원거리는 물리면 쉽게 붕괴.</p>
+        </div>
+      </div>
+
+      <div id="weapon-craft" class="weapon-tab hidden">
+        <h3 class="category-title">가공 & 옵션 (PvP 기준)</h3>
+        <div class="card">
+          <p><strong>PvP에서는 방관(뾰족함) 올인 추천.</strong><br>
+             상대 방어력이 높으면 공격력이 높아도 딜이 안 들어감. 방관이 있어야 죽창 딜이 나옴.</p>
+          <p style="margin-top:.8rem;"><strong>가공 우선순위 (뼈):</strong><br>
+             1. 파편 가공 (유리 2) → 단단함 (공격력↑) / 내구↓ — 깡딜 보완에 최고<br>
+             2. 표면 가공 (진액 1) → 가벼움 (정확도↑) — 무거움 패널티 보완<br>
+             정밀·압축 가공은 전투 효율 낮음.</p>
+          <p style="margin-top:.8rem;">뾰족함 높은 뼈: 알로사우루스 (Lv4 고정), 티라노, 켄트로·안킬로 등 가시/뿔 공룡.</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function showWeaponTab(tab) {
+        document.querySelectorAll('.weapon-tab').forEach(el => el.classList.add('hidden'));
+        document.getElementById('weapon-' + tab).classList.remove('hidden');
+      }
+    </script>
       <h2>섬 · 기후</h2>
       <p class="note">각 기후별로 필요한 주요 저항입니다. 저항이 부족하면 피로도가 빠르게 증가합니다. (나무위키 및 공략글 기반)</p>
       <div class="grid">
