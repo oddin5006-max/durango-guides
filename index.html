@@ -44,6 +44,8 @@
         <a href="#item" onclick="showSection('item')">가공 레시피</a>
         <a href="#food" onclick="showSection('food')">음식 가공</a>
         <a href="#weapon" onclick="showSection('weapon')">무기선택 가이드</a>
+        <a href="#summary" onclick="showSection('summary')">최종 요약</a>
+        <a href="#island" onclick="showSection('island')">섬·기후</a>
       </nav>
     </div>
   </header>
@@ -113,7 +115,27 @@
           <div class="card"><h3>속이 빔</h3><span class="tag warn">감소</span><p>기절 지수↓ / 건설 능력↓</p></div>
         </div>
 
-        <h3 class="category-title">금속</h3>
+        <h3 class="category-title">공룡별 기본 속성 (뼈)</h3>
+        <div class="grid">
+          <div class="card"><h3>파라사우롤로푸스</h3><p>갈비뼈·큰다리뼈: 가벼움3 + 엉성한 구조2</p></div>
+          <div class="card"><h3>센트로사우루스</h3><p>갈비뼈: 높은 밀도3 + 무름1</p></div>
+          <div class="card"><h3>스밀로돈</h3><p>다리뼈·머리뼈: 단단함3 + 엉성한 구조2</p></div>
+          <div class="card"><h3>타르보사우루스 (설원)</h3><p>머리·다리·갈비뼈: 단단함6 + 낮은 밀도3</p></div>
+          <div class="card"><h3>스테고 / 투오지앙고</h3><p>갈비뼈: 치밀한 구조3 + 무거움2</p></div>
+        </div>
+
+        <h3 class="category-title">공룡별 기본 속성 (가죽)</h3>
+        <div class="grid">
+          <div class="card"><h3>매머드</h3><p>기름진8 (강풍 저항)</p></div>
+          <div class="card"><h3>스밀로돈 / 메갈로케로스</h3><p>푹신함3 (추위 저항)</p></div>
+          <div class="card"><h3>다이어울프</h3><p>기름진3</p></div>
+          <div class="card"><h3>타르보사우루스</h3><p>가벼움4 + 낮은 밀도2<br>설원: + 푹신함6</p></div>
+          <div class="card"><h3>브라키오사우루스</h3><p>질긴 섬유5 + 낮은 밀도2</p></div>
+          <div class="card"><h3>케라토사우루스</h3><p>가벼움4 + 연한 섬유2</p></div>
+          <div class="card"><h3>붉은도마뱀</h3><p>통기성 개선3</p></div>
+          <div class="card"><h3>아랫뿔꼬끼리</h3><p>높은 밀도4 + 무거움2</p></div>
+          <div class="card"><h3>딜로포 / 유타랍토르</h3><p>얇음3 (더위 저항)</p></div>
+        </div>
         <div class="grid">
           <div class="card"><h3>날카로운 단면</h3><p>부위파괴 지수↑ / 채집 능력↑</p></div>
           <div class="card"><h3>둥근 단면</h3><span class="tag warn">감소</span><p>부위파괴 지수↓ / 채집 능력↓</p></div>
@@ -253,22 +275,22 @@
         <div class="card">
           <h3>압착(압축) 가공</h3>
           <p>다듬은 재료 + 물 2개<br>
-             <strong>효과:</strong> 높은 밀도 → 내구도 상승</p>
+             <strong>효과:</strong> 높은 밀도 +3 → 내구도 상승</p>
         </div>
         <div class="card">
           <h3>표면 가공</h3>
           <p>다듬은 재료 + 진액 1개<br>
-             <strong>효과:</strong> 가벼움 → 정확도 상승</p>
+             <strong>효과:</strong> 가벼움 +3 → 정확도 상승</p>
         </div>
         <div class="card">
           <h3>정밀 가공</h3>
           <p>다듬은 재료 + 소금 2개<br>
-             <strong>효과:</strong> 치밀한 구조 → 치명도 상승</p>
+             <strong>효과:</strong> 치밀한 구조 +3 → 치명도 상승</p>
         </div>
         <div class="card">
           <h3>파편 가공</h3>
           <p>다듬은 재료 + 유리 파편 2개<br>
-             <strong>효과:</strong> 단단함 → 공격력 상승 + 낮은 밀도(내구도 감소)</p>
+             <strong>효과:</strong> 단단함 +3 → 공격력 상승 + 낮은 밀도1 (내구도 감소)</p>
         </div>
       </div>
 
@@ -346,61 +368,6 @@
       <h2>음식 가공</h2>
       <p class="note">음식 가공은 무기 가공보다 방대하며, 핵심은 <strong>가공 횟수 초기화</strong>와 <strong>버프 누적</strong>을 이용한 다단계 조리입니다. 응용 요리(빵, 완자, 떡 등)로 제작 시 가공 횟수가 초기화되는 특권이 있습니다.</p>
 
-      <h3 class="category-title">기본 1차 가공 (조리 방식)</h3>
-      <div class="grid">
-        <div class="card">
-          <h3>구이 (꼬치·돌판구이)</h3>
-          <p>기본 에너지 회복량을 가장 많이 올려줌.<br>
-             후반에는 소금·설탕을 곁들인 <strong>양념 돌판구이</strong>로 발전하여 스탯 버프 증폭.</p>
-        </div>
-        <div class="card">
-          <h3>삶기 / 끓이기 (수육·탕)</h3>
-          <p>최대 건강 회복에 특화.<br>
-             독버섯·독성 재료는 반드시 삶거나 끓여야 독성 제거.</p>
-        </div>
-        <div class="card">
-          <h3>찜</h3>
-          <p>재료 고유 스탯 버프(힘, 민첩, 솜씨 등)를 증폭시키고 유지 시간을 대폭 늘려주는 상급 가공법.</p>
-        </div>
-        <div class="card">
-          <h3>회 (다듬기)</h3>
-          <p>요리 연구소·도마에서 칼로 가공.<br>
-             조리 시간 없음. 날것 스탯 활용 가능하나 에너지 효율은 낮음.</p>
-        </div>
-        <div class="card">
-          <h3>튀기기 / 볶기</h3>
-          <p>음식의 상하는 속도 늦춤 (보존력 증가).<br>
-             맛없음 디버프 제거에 사용.</p>
-        </div>
-      </div>
-
-      <h3 class="category-title">다단계 가공 (루프 조리) 핵심</h3>
-      <div class="card">
-        <h3>고기완자 루프 예시</h3>
-        <p>1. 고기를 절구에 빻아 <strong>고기완자</strong> 제작 → 가공 횟수 초기화 + 재료 버프 합쳐짐<br>
-           2. 고기완자를 아궁이에서 <strong>돌판구이</strong>로 구워 가열됨 버프 + 에너지 상승<br>
-           3. 소금·설탕을 더해 <strong>양념 돌판구이</strong>로 만들어 버프 효율 극대화</p>
-      </div>
-
-      <h3 class="category-title">직업별 추천 버프 가공</h3>
-      <div class="grid">
-        <div class="card">
-          <h3>전투원 (힘 / 눈치)</h3>
-          <p>양념 고기구이 / 수육<br>
-             고기(힘) + 소금 등을 곁들여 돌판에 굽거나 쪄서 사용.</p>
-        </div>
-        <div class="card">
-          <h3>제작자 / 채집가 (솜씨 / 눈치)</h3>
-          <p>고기빵 / 떡볶이<br>
-             곡물을 가루 내어 만든 빵(솜씨 버프)에 고기를 곁들여 찌거나 구워 먹음.</p>
-        </div>
-        <div class="card">
-          <h3>농부 / 건축가 (의지)</h3>
-          <p>버섯·애벌레 찜<br>
-             의지 스탯을 주는 버섯·애벌레를 가공 횟수가 다할 때까지 찜 연타로 버프 극대화.</p>
-        </div>
-      </div>
-
       <h3 class="category-title">건강 회복 관련</h3>
       <div class="grid">
         <div class="card">
@@ -474,6 +441,8 @@
       <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 1.5rem;">
         <button class="tag" onclick="showWeaponTab('crossbow')" style="cursor:pointer;border:none;">석궁</button>
         <button class="tag" onclick="showWeaponTab('sword')" style="cursor:pointer;border:none;">한손검</button>
+        <button class="tag" onclick="showWeaponTab('spear')" style="cursor:pointer;border:none;">창(홍대병)</button>
+        <button class="tag" onclick="showWeaponTab('bow')" style="cursor:pointer;border:none;">활</button>
         <button class="tag" onclick="showWeaponTab('1v1')" style="cursor:pointer;border:none;">1:1 대인전</button>
         <button class="tag" onclick="showWeaponTab('team')" style="cursor:pointer;border:none;">3:3 / 5:5 팀전</button>
         <button class="tag" onclick="showWeaponTab('craft')" style="cursor:pointer;border:none;">가공 & 옵션</button>
@@ -488,7 +457,11 @@
              주재료 뼈의 옵션이 그대로 계승됨.</p>
           <p style="margin-top:.8rem;"><strong>추천 옵션:</strong> 방어 관통(뾰족함), 정확도, 공격력.<br>
              알로사우루스·티라노 뼈: 뾰족함 Lv4 기본 부여 (무거움 패널티 있음 → 표면 가공으로 보완).</p>
-          <p style="margin-top:.8rem;"><strong>팁:</strong> 철광석 뾰족함은 석궁 부재료로는 효율이 떨어짐. 뼈에 뾰족함이 붙은 것(켄트로·안킬로 등)을 주재료로 쓰는 게 유리.</p>
+          <p style="margin-top:.8rem;"><strong>무기 옵션 수치 (참고):</strong><br>
+             단단함: 공격력 +약 3.25 / 레벨 (최대 Lv21)<br>
+             치밀한 구조: 치명타 +약 0.67 / 레벨 (최대 Lv18)<br>
+             가벼움: 명중률 +약 4 / 레벨 (최대 Lv18)<br>
+             높은 밀도: 내구도 +약 10 / 레벨</p>
         </div>
       </div>
 
@@ -499,6 +472,35 @@
              구르기로 원거리 공격을 파훼하기 쉬움.</p>
           <p style="margin-top:.8rem;">1:1 대인전에서 석궁을 상성상 이김 (구르기 진입 + 빠른 공속).<br>
              다대다에서는 앞라인 탱커/브루저 역할이 중요.</p>
+        </div>
+      </div>
+
+      <div id="weapon-spear" class="weapon-tab hidden">
+        <h3 class="category-title">창 (장창)</h3>
+        <div class="card">
+          <p>1:1 대인전과 부족전(공성전) 양쪽에서 변수를 만드는 근접 무기의 재발견 아이템이자 조커 픽.</p>
+          <p style="margin-top:.8rem;"><strong>장점</strong><br>
+             • 압도적인 근접 사거리 (450) — 상대는 못 때리는데 나는 찌를 수 있는 거리 유지 가능<br>
+             • 순간 폭딜 원탑 '장창 돌격' — 구르기 뺀 타이밍에 꽂으면 판금·화산갑도 한 방에 실사 가능<br>
+             • 부족전(거점 공성전)의 황제 — 방어탑·담장에 가장 강력한 대미지. 방검 유저가 어그로 끄는 동안 돌격으로 거점 파괴</p>
+          <p style="margin-top:.8rem;"><strong>한계점</strong><br>
+             • 낮은 정확도·치명도 패널티 — 회피율 높은 민첩/가죽 세팅에게 빗나갈 확률 높음<br>
+             • 수비태세/방패 유저에게 무력 — 돌격 대미지가 막히고 내구도만 깎임. 피하는 것이 좋음</p>
+          <p style="margin-top:.8rem;"><strong>추천 세팅</strong><br>
+             1. 원재료: 깡딜 → 타르보사우루스·고레벨 스밀로돈 뼈(단단함) / 떡장갑 찢기 → 알로사우루스 뼈(뾰족함)<br>
+             2. 2차 가공: 반드시 표면 가공(진액) → 가벼움(정확도↑)으로 낮은 명중 보완<br>
+             3. 실전: 먼저 돌격 박지 말 것. 평타 찌르기로 간 보다가 적이 구르기 쓰는 순간 후딜에 장창 돌격 꽂기</p>
+        </div>
+      </div>
+
+      <div id="weapon-bow" class="weapon-tab hidden">
+        <h3 class="category-title">활</h3>
+        <div class="card">
+          <p>다인전에서 프리딜이 나오면 딜량이 압도적으로 높음.</p>
+          <p style="margin-top:.8rem;"><strong>그러나 1:1에서는 취약</strong><br>
+             • 한손검이 구르기 쓰면서 붙으면 끔살<br>
+             • 석궁보다 공속이 느리고 석궁처럼 스턴을 못 넣어서 끔살<br>
+             • 창 돌진으로 붙으면 끔살</p>
         </div>
       </div>
 
@@ -536,12 +538,104 @@
       </div>
     </section>
 
-    <script>
-      function showWeaponTab(tab) {
-        document.querySelectorAll('.weapon-tab').forEach(el => el.classList.add('hidden'));
-        document.getElementById('weapon-' + tab).classList.remove('hidden');
-      }
-    </script>
+    <section id="summary" class="section hidden">
+      <h2>최종 요약</h2>
+      <p class="note">참고: exption.tistory.com/246 — 무기·재료 세부정보 정리</p>
+
+      <h3 class="category-title">기본 원칙</h3>
+      <div class="card">
+        <p>무기와 옷의 옵션은 <strong>첫 번째 재료(주재료)</strong>의 속성을 계승합니다.<br>
+           칼 → 칼날, 활 → 활대, 가죽옷 → 가죽, 천옷 → 천<br>
+           가급적 뼈와 나무는 전부 다듬어 두는 것이 좋습니다. 가공 횟수 0이어도 제작 가능.</p>
+      </div>
+
+      <h3 class="category-title">재료별 옵션 효과</h3>
+      <div class="grid">
+        <div class="card">
+          <h3>뼈 · 금속</h3>
+          <p>가벼움: 명중률↑ (의상은 회피↑)<br>
+             무거움: 반대<br>
+             치밀한 구조: 치명타↑<br>
+             엉성한 구조: 치명타↓<br>
+             단단함: 공격력↑<br>
+             무름: 공격력↓<br>
+             높은 밀도: 내구도↑<br>
+             낮은 밀도: 내구도↓</p>
+        </div>
+        <div class="card">
+          <h3>가죽</h3>
+          <p>가벼움: 회피↑ / 무거움: 회피↓<br>
+             질긴 섬유: 방어력↑ / 연한 섬유: 방어력↓<br>
+             통기성: 습기 저항<br>
+             얇음: 더위 저항<br>
+             기름진: 강풍 저항<br>
+             푹신함: 추위 저항</p>
+        </div>
+      </div>
+
+      <h3 class="category-title">가공 수치 (다듬기 후)</h3>
+      <div class="grid">
+        <div class="card"><h3>압축 가공</h3><p>물 2 → 높은 밀도 +3</p></div>
+        <div class="card"><h3>표면 가공</h3><p>진액 1 → 가벼움 +3</p></div>
+        <div class="card"><h3>정밀 가공</h3><p>소금 2 → 치밀한 구조 +3</p></div>
+        <div class="card"><h3>파편 가공</h3><p>유리 파편 2 → 단단함 +3 + 낮은 밀도1</p></div>
+      </div>
+
+      <h3 class="category-title">금속 정련</h3>
+      <div class="grid">
+        <div class="card"><h3>탈황 처리</h3><p>조개껍질 2 + 숯 2 → 높은 밀도 +3</p></div>
+        <div class="card"><h3>열 처리</h3><p>기름 1 + 숯 3 → 가벼움 +2 + 치밀한 구조 +1</p></div>
+        <div class="card"><h3>탄소 처리</h3><p>진흙 3 + 숯 2 → 단단함 +3 + 낮은 밀도1</p></div>
+      </div>
+
+      <h3 class="category-title">공룡별 기본 뼈 옵션</h3>
+      <div class="grid">
+        <div class="card"><h3>파라사우롤로푸스</h3><p>갈비·큰다리: 가벼움3 + 엉성한 구조2</p></div>
+        <div class="card"><h3>센트로사우루스</h3><p>갈비뼈: 높은 밀도3 + 무름1</p></div>
+        <div class="card"><h3>스밀로돈</h3><p>다리·머리: 단단함3 + 엉성한 구조2</p></div>
+        <div class="card"><h3>타르보사우루스 (설원)</h3><p>머리·다리·갈비: 단단함6 + 낮은 밀도3</p></div>
+        <div class="card"><h3>스테고 / 투오지앙고</h3><p>갈비뼈: 치밀한 구조3 + 무거움2</p></div>
+      </div>
+
+      <h3 class="category-title">공룡별 기본 가죽 옵션</h3>
+      <div class="grid">
+        <div class="card"><h3>매머드</h3><p>기름진8</p></div>
+        <div class="card"><h3>스밀로돈 / 메갈로케로스</h3><p>푹신함3</p></div>
+        <div class="card"><h3>다이어울프</h3><p>기름진3</p></div>
+        <div class="card"><h3>타르보사우루스</h3><p>가벼움4 + 낮은 밀도2<br>설원: + 푹신함6</p></div>
+        <div class="card"><h3>브라키오사우루스</h3><p>질긴 섬유5 + 낮은 밀도2</p></div>
+        <div class="card"><h3>케라토사우루스</h3><p>가벼움4 + 연한 섬유2</p></div>
+        <div class="card"><h3>붉은도마뱀</h3><p>통기성 개선3</p></div>
+        <div class="card"><h3>아랫뿔꼬끼리</h3><p>높은 밀도4 + 무거움2</p></div>
+        <div class="card"><h3>딜로포 / 유타랍토르</h3><p>얇음3</p></div>
+      </div>
+
+      <h3 class="category-title">갑주</h3>
+      <div class="grid">
+        <div class="card"><h3>안킬로사우루스</h3><p>Lv48 사막(50)</p></div>
+        <div class="card"><h3>유오플로케팔루스</h3><p>Lv58 / Lv61(60) 온대무법섬(60)</p></div>
+        <div class="card"><h3>케라토사우루스</h3><p>Lv55 열대섬(55)</p></div>
+      </div>
+
+      <h3 class="category-title">무기 옵션 수치 참고</h3>
+      <div class="card">
+        <p>단단함: 공격력 +약 3.25 / 레벨 (최대 Lv21, 근접 231 / 원거리 191)<br>
+           치밀한 구조: 치명타 +약 0.67 / 레벨 (최대 Lv18, 치명 12)<br>
+           가벼움: 명중률 +약 4 / 레벨 (최대 Lv18, 명중 333)<br>
+           높은 밀도: 내구도 +약 10 / 레벨 (최대 Lv24)<br>
+           낮은 밀도: 내구도 -약 10 / 레벨 (최대 Lv26)</p>
+      </div>
+
+      <h3 class="category-title">무기 장식</h3>
+      <div class="grid">
+        <div class="card"><h3>돌 장식</h3><p>맷집 +10 / +30</p></div>
+        <div class="card"><h3>뼈 장식</h3><p>솜씨 +12, 의지 +12</p></div>
+        <div class="card"><h3>이빨 장식</h3><p>민첩 +12, 의지 +12</p></div>
+        <div class="card"><h3>상아 장식</h3><p>힘 +15, 맷집 +15</p></div>
+      </div>
+    </section>
+
+    <section id="island" class="section hidden">
       <h2>섬 · 기후</h2>
       <p class="note">각 기후별로 필요한 주요 저항입니다. 저항이 부족하면 피로도가 빠르게 증가합니다. (나무위키 및 공략글 기반)</p>
       <div class="grid">
@@ -596,6 +690,10 @@
       document.getElementById(id).classList.remove('hidden');
       document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
       event.target.classList.add('active');
+    }
+    function showWeaponTab(tab) {
+      document.querySelectorAll('.weapon-tab').forEach(el => el.classList.add('hidden'));
+      document.getElementById('weapon-' + tab).classList.remove('hidden');
     }
     function filterCards(input,id){
       const q=input.value.toLowerCase();
